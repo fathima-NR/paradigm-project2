@@ -1,0 +1,128 @@
+
+.carousel-overlay {
+    position: absolute;
+    padding: 10px 20px;
+    background-color: black; /* Black background with transparency */
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+  }
+  .carousel-overlay1 {
+    position: absolute;
+    padding: 10px 20px;
+    background-color:transparent; /* Black background with transparency */
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+  }
+  .contact-us {
+    top: 15%;
+    left: 43%;
+    transform: translateX(-50%);
+    font-size: 11px;
+    width: 160px;
+  }
+  
+  .news {
+    top: 15%;
+    left: 23%;
+    font-size: 11px;
+    width: 160px;
+  }
+  
+  .founder {
+    bottom: 5%;
+    left: 55%;
+    transform: translateX(-50%);
+    font-size: 11px;
+    width: 250px;
+    padding: 0%;
+  }
+  .founder1 {
+    bottom: 2%;
+    left: 33%;
+    transform: translateX(-50%);
+    font-size: 11px;
+    width: 250px;
+    padding: 0%;
+  }
+  
+  .archive-search {
+    bottom: 1%;
+    right: 10%;
+    font-size: 11px;
+    width: 200px;
+  }
+  
+  .image-gallery {
+    top: 15%;
+    right: 10%;
+    font-size: 11px;
+    padding: 0%;
+    width: 20%; /* Reduced width */
+  }
+  
+  .about-us {
+    bottom: 17%;
+    left: 10%;
+    font-size: 11px;
+    width: 160px;
+  }
+  
+  .small-gallery-image {
+    width: 100%;
+    height: auto;
+  
+  }
+  .carousel-overlay .caption {
+    position: absolute;
+    bottom: 73%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-align: center;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+  }
+  
+  .small-gallery-image {
+    height: auto;
+    object-fit: cover;
+  }
+
+  .carousel-overlay ul li a {
+    display: block;
+    margin: 5px 0;
+    transition: background-color 0.3s ease;
+  }
+  
+  .carousel-overlay ul li a:hover {
+    background-color: white;
+    color: black !important;
+  }
+  .carousel-overlay1.button-group-overlay {
+    position: absolute;
+    bottom: 80%;
+    left: 60%;
+    transform: translateX(-50%);
+    z-index: 10;
+    display: flex;
+    gap: 10px; /* Space between buttons */
+  }
+  
+  .carousel-overlay1.button-group-overlay .btn {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+  .carousel-overlay.adjusted-position {
+    /* Example adjustment */
+    top: 10%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+    width: 180px;
+  }
+  .carousel-overlay.hidden {
+    display: none;
+}
