@@ -2,10 +2,11 @@
 .carousel-overlay {
     position: absolute;
     padding: 10px 20px;
-    background-color: black; /* Black background with transparency */
+    background-color: rgb(0, 0, 0); /* Black background with transparency */
     color: white;
     text-align: center;
     border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px black;
   }
   .carousel-overlay1 {
     position: absolute;
@@ -15,56 +16,65 @@
     text-align: center;
     border-radius: 5px;
   }
+  
   .contact-us {
-    top: 15%;
-    left: 43%;
+    top: 14%;
+    left: 36%;
     transform: translateX(-50%);
     font-size: 11px;
     width: 160px;
   }
-  
+
+
   .news {
-    top: 15%;
-    left: 23%;
+    top: 14%;
+    left: 15%;
     font-size: 11px;
     width: 160px;
   }
   
   .founder {
-    bottom: 5%;
+    bottom: 4%;
     left: 55%;
     transform: translateX(-50%);
     font-size: 11px;
-    width: 250px;
+    width: 200px !important;
     padding: 0%;
   }
   .founder1 {
-    bottom: 2%;
-    left: 33%;
+    bottom: 4%;
+    left: 37%;
     transform: translateX(-50%);
     font-size: 11px;
-    width: 250px;
+    width: 200px !important;
     padding: 0%;
   }
-  
+  .founder1 img {
+    height: 150px;
+  }
+  .founder img {
+    height: 150px;
+    width: 200px;
+  }
   .archive-search {
-    bottom: 1%;
-    right: 10%;
+    bottom: 0%;
+    right: 1%;
     font-size: 11px;
     width: 200px;
   }
   
   .image-gallery {
-    top: 15%;
-    right: 10%;
+    top: 10%;
+   
+    right: 1%;
     font-size: 11px;
     padding: 0%;
     width: 20%; /* Reduced width */
   }
   
   .about-us {
-    bottom: 17%;
-    left: 10%;
+ top: 14%;
+    left: 1%;
     font-size: 11px;
     width: 160px;
   }
@@ -91,19 +101,29 @@
     object-fit: cover;
   }
 
+  .carousel-overlay ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
   .carousel-overlay ul li a {
     display: block;
+    text-decoration: none;
+    color: white;
+    border-bottom: 1px solid white;
+    padding-bottom: 5px;
     margin: 5px 0;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
   
   .carousel-overlay ul li a:hover {
-    background-color: white;
-    color: black !important;
+    background-color: rgb(255, 255, 255) !important;
+    color: rgb(0, 0, 0) !important;
   }
+  
   .carousel-overlay1.button-group-overlay {
     position: absolute;
-    bottom: 80%;
+    bottom: 70%;
     left: 60%;
     transform: translateX(-50%);
     z-index: 10;
@@ -113,16 +133,103 @@
   
   .carousel-overlay1.button-group-overlay .btn {
     font-size: 14px;
-    padding: 10px 20px;
+    padding: 5px 100px;
+
   }
-  .carousel-overlay.adjusted-position {
-    /* Example adjustment */
-    top: 10%;
-    left: 10%;
-    transform: translate(-50%, -50%);
-    font-size: 12px;
-    width: 180px;
+
+/* For screens smaller than 768px (e.g., mobile devices) */
+@media (max-width: 768px) {
+    .carousel-overlay.contact-us {
+      top: 17%;
+      left: 43%;
+      transform: translateX(-50%);
+      width: 100px;
+      font-size: 6px;
+     padding: 2%;
+    }
+  
+    .carousel-overlay.news {
+      top: 17%;
+      left: 71%;
+      transform: translateX(-50%);
+      width: 100px;
+      font-size: 6px;
+      padding: 2%;
+    }
+  
+    .carousel-overlay.founder {
+      bottom:13%;
+      left: 16%;
+      transform: translateX(-50%);
+ width: 100px !important;
+      font-size: 6px;
+    }
+  
+    .carousel-overlay.founder1 {
+      bottom: 13%;
+      left: 45%;
+      transform: translateX(-50%);
+      width: 100px !important;
+      font-size: 6px;
+    }
+  
+    .carousel-overlay.archive-search {
+      bottom: 5%;
+      left: 80%;
+      transform: translateX(-50%);
+      width: 150px;
+      font-size: 6px;
+    }
+  
+    .carousel-overlay.image-gallery {
+      top: 33%;
+      left: 80%;
+      transform: translateX(-50%);
+      width: 150px;
+      
+      font-size: 6px;
+    }
+    .carousel-overlay .caption {
+        position: absolute;
+        bottom: 60%;
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
+        text-align: center;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+      
+      }
+      
+    .carousel-overlay.about-us {
+   top: 17%;
+      left: 15%;
+      transform: translateX(-50%);
+      width: 100px;
+      font-size: 6px;
+      height: 220px;
+      padding: 2%;
+    }
+  
+    .carousel-overlay1.button-group-overlay {
+      bottom: 41%;
+      left: 38%;
+      transform: translateX(-50%);
+      width: 100px;
+      font-size: 6px;
+    }
+    
+  .carousel-overlay1.button-group-overlay .btn {
+    font-size: 10px;
+    padding: 5px 40px;
   }
-  .carousel-overlay.hidden {
-    display: none;
-}
+  .founder1 img {
+    height:100px;
+ 
+  }
+  .founder img {
+    height: 100px;
+    width: 100px;
+  }
+  }
+  
