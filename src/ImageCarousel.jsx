@@ -2,19 +2,18 @@ import React, { useState } from "react";
 import { Carousel, Button, ButtonGroup } from "react-bootstrap";
 import '/src/ImageCarousal.css'; // Make sure to include your custom CSS
 import founder from  "/src/assets/images (1).jpg";
+import slide1 from  "/src/assets/1074_puert_phot_09-1514x1080.jpg"
+import slide2 from   "/src/assets/1199_fg_089copy-1440x1080.jpg"
+import slide3 from "/src/assets/1229_ega212-1514x1080.jpg"
+import slide4 from "/src/assets/1074_puert_phot_09-1514x1080.jpg"
+import slide5 from "/src/assets/1199_fg_089copy-1440x1080.jpg"
+import slide6 from "/src/assets/1229_ega212-1514x1080.jpg"
 import img1 from "/src/assets/dubai-islands-residences-jpg-Dv0SdikO.webp";
 import { FiMove } from 'react-icons/fi'; 
 import { FaArrowUp, FaArrowDown, FaArrowLeft, FaArrowRight, FaBars } from "react-icons/fa"; // For icons
 
 const ImageCarousel = () => {
-  const images = [
-    "/src/assets/1074_puert_phot_09-1514x1080.jpg",
-    "/src/assets/1199_fg_089copy-1440x1080.jpg",
-    "/src/assets/1229_ega212-1514x1080.jpg",
-    "/src/assets/1074_puert_phot_09-1514x1080.jpg",
-    "/src/assets/1199_fg_089copy-1440x1080.jpg",
-    "/src/assets/1229_ega212-1514x1080.jpg",
-  ];
+    const images = [slide1, slide2, slide3, slide4, slide5, slide6];
 
   const [isOverlayHidden, setOverlayHidden] = useState(false);
 
