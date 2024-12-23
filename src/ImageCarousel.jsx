@@ -20,16 +20,42 @@ const ImageCarousel = () => {
     setOverlayHidden(!isOverlayHidden);
   };
 
-  const moveOverlayPosition = () => {
+  const moveOverlayPositions = () => {
     // Logic to change the position of carousel overlay items
     const overlayItems = document.querySelectorAll(".carousel-overlay");
     overlayItems.forEach((item) => {
       item.style.transform = `translate(${Math.random() * -100}px, ${Math.random() * 100}px)`;
     });
   };
+  const moveOverlayPosition = (event) => {
+    const overlayItems = document.querySelectorAll(".carousel-overlay");
+    const item = event.target.closest('.carousel-overlay');
 
+    if (item) {
+      let shiftX = event.clientX;
+      let shiftY = event.clientY;
+
+      const onMouseMove = (moveEvent) => {
+        moveEvent.preventDefault();
+
+        const newX = moveEvent.clientX - shiftX;
+        const newY = moveEvent.clientY - shiftY;
+
+        item.style.transform = `translate(${newX}px, ${newY}px)`;
+      }; 
+
+      const onMouseUp = () => {
+        document.removeEventListener("mousemove", onMouseMove);
+        document.removeEventListener("mouseup", onMouseUp);
+      };
+
+      document.addEventListener("mousemove", onMouseMove);
+      document.addEventListener("mouseup", onMouseUp);
+    }
+  }; 
   return (
-    <Carousel indicators={false}>
+    <div className="Carousel-container">
+    <Carousel indicators={false} interval={2000}>
       {images.map((image, index) => (
         <Carousel.Item key={index}>
           <img
@@ -42,7 +68,7 @@ const ImageCarousel = () => {
           {/* Conditional Rendering: Show overlays only when not hidden */}
           {!isOverlayHidden && (
             <>
-              <div className="carousel-overlay about-us">
+              <div className="carousel-overlay about-us"  onMouseDown={moveOverlayPosition} >
                 <h2  className="fs-6" >About Us</h2>
                 <p>
                   PARADIGM Shaping Tomorrow. We believe in a forward-thinking approach that places the
@@ -55,14 +81,14 @@ const ImageCarousel = () => {
                   More
                 </a>
               </div>
-              <div className="carousel-overlay news">
+              <div className="carousel-overlay news" onMouseDown={moveOverlayPosition}>
                 <h2  className="fs-6">News</h2>
                 <p>Stay updated with the latest news and updates from our team.</p>
                 <a href="" className="text-light">
                   More
                 </a>
               </div>
-              <div className="carousel-overlay contact-us">
+              <div className="carousel-overlay contact-us"  onMouseDown={moveOverlayPosition}>
                 <h2  className="fs-6" >Contact Us</h2>
                 <p>
                   PARADIGM Engineering Consultant LLC, Office #806, Saheel Tower 1, Al Nahda 1,
@@ -75,7 +101,7 @@ const ImageCarousel = () => {
                   More
                 </a>
               </div>
-              <div className="carousel-overlay founder">
+              <div className="carousel-overlay founder" onMouseDown={moveOverlayPosition}>
                 <img
                   src={founder}
                   alt="Founder"
@@ -84,7 +110,7 @@ const ImageCarousel = () => {
                 <h2  className="fs-6" >Founder</h2>
                 <p>Our founder's journey and vision for the future.</p>
               </div>
-              <div className="carousel-overlay founder1">
+              <div className="carousel-overlay founder1"  onMouseDown={moveOverlayPosition}>
                 <img
                   src={img1}
                   alt="Founder"
@@ -94,7 +120,7 @@ const ImageCarousel = () => {
                 <h2  className="fs-6" >PARADIGM</h2>
                 <p>Designing the Blueprint of the Future With Us</p>
               </div>
-              <div className="carousel-overlay image-gallery">
+              <div className="carousel-overlay image-gallery"  onMouseDown={moveOverlayPosition}>
                 <Carousel indicators={false} controls={false} interval={3000} fade>
                   {images.map((image, index) => (
                     <Carousel.Item key={index}>
@@ -111,7 +137,7 @@ const ImageCarousel = () => {
                   ))}
                 </Carousel>
               </div>
-              <div className="carousel-overlay archive-search">
+              <div className="carousel-overlay archive-search"  onMouseDown={moveOverlayPosition}>
   <h2 className="fs-6">Archive Search</h2>
   <input
     type="text"
@@ -150,7 +176,7 @@ const ImageCarousel = () => {
             </>
           )}
 
-          <div className="carousel-overlay1 button-group-overlay">
+          <div className="carousel-overlay1 button-group-overlay"  onMouseDown={moveOverlayPosition}>
             <ButtonGroup>
               <Button
                 variant="light"
@@ -162,7 +188,7 @@ const ImageCarousel = () => {
               <Button
                 variant="light"
                 className="border border-2 px-3"
-                onClick={moveOverlayPosition}
+                onClick={moveOverlayPositions}
               >
                 <FaBars /> {/* Menu icon */}
               </Button>
@@ -178,6 +204,7 @@ const ImageCarousel = () => {
         </Carousel.Item>
       ))}
     </Carousel>
+    </div>
   );
 };
 
