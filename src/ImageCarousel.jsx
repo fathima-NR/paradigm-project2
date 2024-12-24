@@ -28,8 +28,8 @@ const ImageCarousel = () => {
     });
   };
   const moveOverlayPosition = (event) => {
-    const overlayItems = document.querySelectorAll(".carousel-overlay");
-    const item = event.target.closest('.carousel-overlay');
+    const overlayItems = document.querySelectorAll(".carousel-overlay,.carousel-overlay1");
+    const item = event.target.closest('.carousel-overlay,.carousel-overlay1');
 
     if (item) {
       let shiftX = event.clientX;
@@ -176,23 +176,23 @@ const ImageCarousel = () => {
             </>
           )}
 
-          <div className="carousel-overlay1 button-group-overlay"  onMouseDown={moveOverlayPosition}>
+          <div className="carousel-overlay1 button-group-overlay" onMouseDown={moveOverlayPosition}  >
             <ButtonGroup>
-              <Button
+              <Button 
                 variant="light"
                 className="border border-2"
          
               >
                 Enter
               </Button>
-              <Button
+              <Button 
                 variant="light"
                 className="border border-2 px-3"
                 onClick={moveOverlayPositions}
               >
                 <FaBars /> {/* Menu icon */}
               </Button>
-              <Button
+              <Button 
                 variant="light"
                 className="border border-2 px-3"
                 onClick={toggleOverlayVisibility} // Toggle overlay visibility
@@ -200,8 +200,7 @@ const ImageCarousel = () => {
                 <FiMove /> {/* Move icon */}
               </Button>
             </ButtonGroup>
-          </div>
-        </Carousel.Item>
+          </div>        </Carousel.Item>
       ))}
     </Carousel>
     </div>

@@ -17,7 +17,7 @@
   }
   .carousel-overlay1 {
     position: absolute;
-   ;
+   
     padding: 10px 20px;
     background-color:transparent; /* Black background with transparency */
     color: white;
@@ -27,7 +27,7 @@
   
   .contact-us {
     top: 14%;
-    left: 36%;
+    left: 39%;
     transform: translateX(-50%);
     font-size: 11px;
     width: 160px;
@@ -36,7 +36,7 @@
 
   .news {
     top: 14%;
-    left: 15%;
+    left: 18%;
     font-size: 11px;
     width: 160px;
   }
@@ -82,7 +82,7 @@
   
   .about-us {
  top: 14%;
-    left: 1%;
+    left: 4%;
     font-size: 11px;
     width: 160px;
   }
