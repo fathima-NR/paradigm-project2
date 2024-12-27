@@ -210,18 +210,20 @@ font-weight: 700;
     font-size: 15px;
   }
     .carousel-overlay.founder {
-      bottom:14%;
+      top:62%;
       left: 16%;
       transform: translateX(-50%);
  width: 100px !important;
       font-size: 6px;
+      height: 170px;
     }
   .founder h2{
     font-size: 15px !important;
   }
 
     .carousel-overlay.founder1 {
-      bottom: 14%;
+      top: 62%;
+      height: 170px;
       left: 45%;
       transform: translateX(-50%);
       width: 100px !important;
@@ -231,11 +233,12 @@ font-weight: 700;
     font-size: 15px !important;
   }
     .carousel-overlay.archive-search {
-      bottom: 6% !important;
+      top: 62% !important;
       left: 80%;
       transform: translateX(-50%);
       width: 150px;
       font-size: 6px;
+      height: 220px;
     }
   .archive-search h2{
     font-size: 15px !important;

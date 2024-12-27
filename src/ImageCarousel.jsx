@@ -131,7 +131,7 @@ const ImageCarousel = () => {
                         style={{ height: "auto", objectFit: "cover" }}
                       />
                       <div className="caption">
-                        <p>Caption for Image</p>
+                        <p>OUR PROJECTS</p>
                       </div>
                     </Carousel.Item>
                   ))}
