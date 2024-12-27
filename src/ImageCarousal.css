@@ -241,7 +241,7 @@ font-weight: 700;
     font-size: 15px !important;
   }
     .carousel-overlay.image-gallery {
-      top: 33%;
+      top: 35%;
       left: 80%;
       transform: translateX(-50%);
       width: 150px;
