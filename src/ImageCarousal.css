@@ -126,17 +126,19 @@ font-weight: 700;
   }
   .carousel-overlay .caption {
     position: absolute;
-    bottom: 73%;
+top: 0;
     left: 50%;
     transform: translateX(-50%);
     color: white;
+ height: 50px;
     text-align: center;
     width: 100%;
+    font-weight: 500;
     background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px;
+ padding-top: 15px;
     overflow: hidden;
   }
-  
+
   .small-gallery-image {
     height: auto;
     object-fit: cover;
@@ -255,12 +257,13 @@ font-weight: 700;
         position: absolute;
         bottom: 60%;
         left: 50%;
+        height: 30px;
         transform: translateX(-50%);
         color: white;
         text-align: center;
         width: 100%;
         background-color: rgba(0, 0, 0, 0.5);
-      
+      padding-top: 10px;
       }
       
     .carousel-overlay.about-us {
