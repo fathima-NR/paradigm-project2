@@ -272,7 +272,7 @@ top: 0;
       transform: translateX(-50%);
       width: 100px;
       font-size: 6px;
-      height: 200px;
+      height: auto;
       padding: 2%;
     }
   .about-us h2{
