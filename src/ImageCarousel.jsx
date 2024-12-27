@@ -183,7 +183,7 @@ const ImageCarousel = () => {
                 className="border border-2 px-5 "
          
               >
-                Enter
+              Explore Now
               </Button>
               <Button 
                
