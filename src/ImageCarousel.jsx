@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { Carousel, Button, ButtonGroup } from "react-bootstrap";
 import "/src/ImageCarousal.css"; // Include your custom CSS
 import founder from "/src/assets/images (1).jpg";
-import slide1 from "/src/assets/1074_puert_phot_09-1514x1080.jpg";
-import slide2 from "/src/assets/1199_fg_089copy-1440x1080.jpg";
-import slide3 from "/src/assets/1229_ega212-1514x1080.jpg";
-import slide4 from "/src/assets/1074_puert_phot_09-1514x1080.jpg";
-import slide5 from "/src/assets/1199_fg_089copy-1440x1080.jpg";
-import slide6 from "/src/assets/1229_ega212-1514x1080.jpg";
+import slide1 from "/src/assets/pexels-nextvoyage-1470405.jpg";
+import slide2 from "/src/assets/oriental-peal-tower-shanghai.jpg";
+import slide3 from "/src/assets/pexels-photo-442579.jpeg";
+import slide4 from "/src/assets/skyscrapers-palm-trees-dubai-uae.jpg";
+import slide5 from "/src/assets/pexels-photo-4471199.jpeg";
+import slide6 from "/src/assets/pexels-photo-10549876.jpeg";
 import img1 from "/src/assets/dubai-islands-residences-jpg-Dv0SdikO.webp";
 import { FiMove } from "react-icons/fi";
 import { FaArrowUp, FaArrowDown, FaArrowLeft, FaArrowRight, FaBars } from "react-icons/fa";
@@ -55,7 +55,7 @@ const ImageCarousel = () => {
   }; 
   return (
     <div className="Carousel-container">
-    <Carousel indicators={false} interval={2000}>
+    <Carousel indicators={false} interval={3000}>
       {images.map((image, index) => (
         <Carousel.Item key={index}>
           <img
@@ -69,7 +69,7 @@ const ImageCarousel = () => {
           {!isOverlayHidden && (
             <>
               <div className="carousel-overlay about-us"  onMouseDown={moveOverlayPosition} >
-                <h2  className="fs-6" >About Us</h2>
+                <h2 className="pt-2 pb-1" >ABOUT US</h2>
                 <p>
                   PARADIGM Shaping Tomorrow. We believe in a forward-thinking approach that places the
                   individual first - the employee, the client, the end-user. Our founding senior
@@ -77,19 +77,19 @@ const ImageCarousel = () => {
                   delivery, providing hands-on consultancy services in the UAE across healthcare,
                   commercial, residential, and urban development sectors.
                 </p>
-                <a href="" className="text-light">
+                <a href="" className="text-dark fw-bold">
                   More
                 </a>
               </div>
               <div className="carousel-overlay news" onMouseDown={moveOverlayPosition}>
-                <h2  className="fs-6">News</h2>
+                <h2 className="pt-2 pb-1">NEWS</h2>
                 <p>Stay updated with the latest news and updates from our team.</p>
-                <a href="" className="text-light">
+                <a href="" className="text-dark fw-bold">
                   More
                 </a>
               </div>
               <div className="carousel-overlay contact-us"  onMouseDown={moveOverlayPosition}>
-                <h2  className="fs-6" >Contact Us</h2>
+                <h2 className="pt-2 pb-1">CONTACT US</h2>
                 <p>
                   PARADIGM Engineering Consultant LLC, Office #806, Saheel Tower 1, Al Nahda 1,
                   Dubai, UAE <br />
@@ -97,7 +97,7 @@ const ImageCarousel = () => {
                   admin@PARAD-ec.com <br />
                   P: +971 45850899 <br />
                 </p>
-                <a href="" className="text-light">
+                <a href="" className="text-dark fw-bold">
                   More
                 </a>
               </div>
@@ -107,8 +107,8 @@ const ImageCarousel = () => {
                   alt="Founder"
              
                 />
-                <h2  className="fs-6" >Founder</h2>
-                <p>Our founder's journey and vision for the future.</p>
+                <h2 className="pt-2"  >FOUNDER</h2>
+                <p className="px-1">Our founder's journey and vision for the future.</p>
               </div>
               <div className="carousel-overlay founder1"  onMouseDown={moveOverlayPosition}>
                 <img
@@ -117,8 +117,8 @@ const ImageCarousel = () => {
                   className="img-fluid"
                  
                 />
-                <h2  className="fs-6" >PARADIGM</h2>
-                <p>Designing the Blueprint of the Future With Us</p>
+                <h2 className="pt-2">PARADIGM</h2>
+                <p className="px-1">Designing the Blueprint of the Future With Us</p>
               </div>
               <div className="carousel-overlay image-gallery"  onMouseDown={moveOverlayPosition}>
                 <Carousel indicators={false} controls={false} interval={3000} fade>
@@ -138,7 +138,7 @@ const ImageCarousel = () => {
                 </Carousel>
               </div>
               <div className="carousel-overlay archive-search"  onMouseDown={moveOverlayPosition}>
-  <h2 className="fs-6">Archive Search</h2>
+  <h2 className="pt-2 pb-1">ARCHIVE SEARCH</h2>
   <input
     type="text"
     placeholder="KeyWord Search"
@@ -146,7 +146,7 @@ const ImageCarousel = () => {
       width: "100%",
       padding: "10px",
       marginTop: "10px",
-      backgroundColor: "rgba(255, 255, 255, 0.7)",
+      backgroundColor: "rgba(0, 0, 0, 0.7)",
       border: "none",
       color: "white",
     }}
@@ -179,21 +179,21 @@ const ImageCarousel = () => {
           <div className="carousel-overlay1 button-group-overlay" onMouseDown={moveOverlayPosition}  >
             <ButtonGroup>
               <Button 
-                variant="light"
-                className="border border-2"
+         
+                className="border border-2 px-5 "
          
               >
                 Enter
               </Button>
               <Button 
-                variant="light"
+               
                 className="border border-2 px-3"
                 onClick={moveOverlayPositions}
               >
                 <FaBars /> {/* Menu icon */}
               </Button>
               <Button 
-                variant="light"
+               
                 className="border border-2 px-3"
                 onClick={toggleOverlayVisibility} // Toggle overlay visibility
               >
