@@ -24,7 +24,7 @@ const ImageCarousel = () => {
     // Logic to change the position of carousel overlay items
     const overlayItems = document.querySelectorAll(".carousel-overlay");
     overlayItems.forEach((item) => {
-      item.style.transform = `translate(${Math.random() * -100}px, ${Math.random() * 100}px)`;
+      item.style.transform = `translate(${Math.random() * 50}px, ${Math.random() * -30}px)`;
     });
   };
   const moveOverlayPosition = (event) => {
@@ -68,27 +68,26 @@ const ImageCarousel = () => {
           {/* Conditional Rendering: Show overlays only when not hidden */}
           {!isOverlayHidden && (
             <>
-              <div className="carousel-overlay about-us"  onMouseDown={moveOverlayPosition} >
+              <div className="carousel-overlay active about-us" >
                 <h2 className="pt-2 pb-1" >ABOUT US</h2>
-                <p>
-                  PARADIGM Shaping Tomorrow. We believe in a forward-thinking approach that places the
-                  individual first - the employee, the client, the end-user. Our founding senior
-                  leadership team has over 70 years of cumulative experience in design and project
-                  delivery, providing hands-on consultancy services in the UAE across healthcare,
-                  commercial, residential, and urban development sectors.
+                <p>PARADIGM Shaping Tomorrow with a forward-thinking approach that prioritizes the individual — employee, client, and end-user. Our senior leadership team brings over 70 years of experience.
+
+
                 </p>
                 <a href="" className="text-dark fw-bold">
                   More
                 </a>
               </div>
-              <div className="carousel-overlay news" onMouseDown={moveOverlayPosition}>
+              <div className="carousel-overlay active news" >
                 <h2 className="pt-2 pb-1">NEWS</h2>
                 <p>Stay updated with the latest news and updates from our team.</p>
+                <p>
+Follow us for more insights and updates!</p>
                 <a href="" className="text-dark fw-bold">
                   More
                 </a>
               </div>
-              <div className="carousel-overlay contact-us"  onMouseDown={moveOverlayPosition}>
+              <div className="carousel-overlay active contact-us"  >
                 <h2 className="pt-2 pb-1">CONTACT US</h2>
                 <p>
                   PARADIGM Engineering Consultant LLC, Office #806, Saheel Tower 1, Al Nahda 1,
@@ -101,26 +100,26 @@ const ImageCarousel = () => {
                   More
                 </a>
               </div>
-              <div className="carousel-overlay founder" onMouseDown={moveOverlayPosition}>
+              <div className="carousel-overlay active founder">
                 <img
                   src={founder}
                   alt="Founder"
              
                 />
-                <h2 className="pt-2"  >FOUNDER</h2>
+                <h2 className="pt-1"  >FOUNDER</h2>
                 <p className="px-1">Our founder's journey and vision for the future.</p>
               </div>
-              <div className="carousel-overlay founder1"  onMouseDown={moveOverlayPosition}>
+              <div className="carousel-overlay active founder1" >
                 <img
                   src={img1}
                   alt="Founder"
                   className="img-fluid"
                  
                 />
-                <h2 className="pt-2">PARADIGM</h2>
+                <h2 className="pt-1">PARADIGM</h2>
                 <p className="px-1">Designing the Blueprint of the Future With Us</p>
               </div>
-              <div className="carousel-overlay image-gallery"  onMouseDown={moveOverlayPosition}>
+              <div className="carousel-overlay active image-gallery" >
                 <Carousel indicators={false} controls={false} interval={3000} fade>
                   {images.map((image, index) => (
                     <Carousel.Item key={index}>
@@ -137,20 +136,10 @@ const ImageCarousel = () => {
                   ))}
                 </Carousel>
               </div>
-              <div className="carousel-overlay archive-search"  onMouseDown={moveOverlayPosition}>
-  <h2 className="pt-2 pb-1">ARCHIVE SEARCH</h2>
-  <input
-    type="text"
-    placeholder="KeyWord Search"
-    style={{
-      width: "100%",
-      padding: "10px",
-      marginTop: "10px",
-      backgroundColor: "rgba(0, 0, 0, 0.7)",
-      border: "none",
-      color: "white",
-    }}
-  />
+              <div className="carousel-overlay active archive-search"  >
+  <h2 className="pt-2 pb-1">SERVICES</h2>
+  
+
   <ul>
     <li>
       <a href="#optionA">Architecture</a>
@@ -176,14 +165,14 @@ const ImageCarousel = () => {
             </>
           )}
 
-          <div className="carousel-overlay1 button-group-overlay" onMouseDown={moveOverlayPosition}  >
+          <div className="carousel-overlay1 active button-group-overlay" onMouseDown={moveOverlayPosition}  >
             <ButtonGroup>
               <Button 
          
                 className="border border-2 px-5 "
          
               >
-              Explore Now
+              Explore
               </Button>
               <Button 
                
